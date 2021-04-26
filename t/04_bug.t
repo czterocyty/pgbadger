@@ -20,4 +20,4 @@ ok( $? == 0 && $ret eq 'Total query duration: 270ms', "Total query duration dete
 
 $ret = `perl pgbadger -q -o - --format txt --prefix '%m [%p]: user=%u,db=%d,app=%a,client=%h ' $LOG2 | grep "Number of queries:"`;
 chomp($ret);
-ok( $? == 0 && $ret eq 'Number of queries: 1', "Only bar user query parsed :(");
+ok( $? == 0 && $ret eq 'Number of queries: 2', "Two queries has to be parsed");
